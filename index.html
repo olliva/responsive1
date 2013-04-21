@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive</title>
+    <link rel="stylesheet" type="text/css" href="foundation.css">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <script src="jquery.js"></script>
+</head>
+<style>
+    * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        font-family: "MenschRegular", "helvetica", arial, sans-serif;
+    }
+    body {
+        margin: 0;
+    }
+    p{
+        padding: 0;
+        margin: 0;
+        font-size: 12px;
+        line-height: 21px;
+        margin-top: 5px;
+        color: white;
+        font-weight: lighter;
+    }
+    a{
+        text-decoration: none;
+    }
+    a:hover{
+        cursor: pointer;
+    }
+    ul[type="none"] {
+        margin: 0;
+        padding: 0;
+    }
+    .row{
+        min-width: 0;
+    }
+    .picture img{
+        width: 100%;
+    }
+    .squareElement{
+        display: block;
+    }
+    .widthSquareElement{
+        display: block;
+    }
+
+
+
+
+
+    .header{
+        background-color: #373c3f;
+        padding-left: 50px;
+        font-weight: bold;
+        position: relative;
+    }
+    .header li a:hover{
+        color: #add8e0;
+    }
+    .header .fullHeader li{
+        display: inline-block;
+        color: white;
+        padding: 30px 25px 30px 0;
+        line-height: 15px;
+
+    }
+    .header a{
+        color: #ffffff;
+    }
+    .header .smallHeader{
+        padding: 30px 30px 30px 0;
+        display: none;
+        font-size: 15px;
+    }
+    .header .smallHeader .navigation:hover{
+        color: #add8e0;
+    }
+    .header .smallHeader .invisibleMenu {
+        display: none;
+    }
+    .header .smallHeader .invisibleMenu li {
+        padding-top: 10px;
+    }
+    .header .rightCorner{
+        position: absolute;
+        background-color: #202529;
+        right: 0;
+        height: 100%;
+        top: 0;
+        text-align: center;
+        display: block;
+    }
+
+
+
+
+    .blueScreen{
+        background-color: #0890a8;
+        padding-top: 200px;
+        padding-left: 50px;
+        padding-bottom: 170px;
+
+    }
+    .blueScreen .blueScreenContent{
+        position: relative;
+        display: inline-block;
+    }
+    .blueScreen .blueScreenContent .blueScreenHeader{
+        font-size: 65px;
+        color: #ffffff;
+        line-height: 79px;
+    }
+    .blueScreen .blueScreenContent .blueScreenArrow{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 40px;
+    }
+    .blueScreen .blueScreenLink{
+        padding-top: 64px;
+    }
+    .blueScreen .blueScreenLink a{
+        color: #a8d5df;
+        font-size: 30px;
+    }
+
+
+
+    .darkMenu{
+        padding: 0 50px;
+        background-color: #27212c;
+        position: relative;
+    }
+    .darkMenu .darkPart{
+        font-size: 25px;
+        color: #9383a1;
+        padding: 90px 0;
+    }
+    .darkMenu .pinkButton{
+        background-color: #bc3183;
+        position: absolute;
+        right: 0;
+        height: 100%;
+        top: 0;
+        text-align: center;
+    }
+    .darkMenu .pinkButton img{
+        width: 45px;
+    }
+
+
+
+    .menuWithPictures{
+        background-color: #5b0fa1;
+    }
+    .menuWithPictures .violetButton{
+        width: 100%;
+        background-color: #5b0fa1;
+        text-align: center;
+    }
+    .menuWithPictures .violetButton img{
+        width: 40px;
+    }
+    .menuWithPictures .row{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+    .menuWithPictures .row .columns{
+        margin: 0;
+        padding: 0;
+    }
+
+
+
+    .downText{
+        background-color: #ebebeb;
+        padding: 56px 50px 0 50px;
+        padding-bottom: 170px;
+    }
+    .downText .row .textHeader a{
+        color: #088ca5;
+        font-size: 25px;
+    }
+    .downText .row .textColumn p{
+        color: #515151;
+        font-weight: normal;
+        padding-top: 20px;
+        font-size: 15px;
+    }
+
+
+
+
+
+
+    @media only screen and (max-width: 980px){
+        .blueScreen{
+            padding-top: 150px;
+            padding-bottom: 100px;
+        }
+        .blueScreen .blueScreenLink{
+            padding-top: 58px;
+        }
+        .darkMenu .darkPart{
+            padding: 60px 0;
+        }
+        .blueScreen .blueScreenContent .blueScreenHeader{
+            font-size: 50px;
+            line-height: 69px;
+        }
+        .blueScreen .blueScreenContent .blueScreenArrow{
+            width: 20px;
+        }
+        .darkMenu .pinkButton img{
+            width: 30px;
+        }
+    }
+    @media only screen and (max-width: 640px){
+        .header .smallHeader{
+            display: inline-block;
+        }
+        .header .fullHeader{
+            display: none;
+        }
+        .header .buttonWithArrow img{
+            width: 30px;
+        }
+        .blueScreen{
+            padding-top: 90px;
+            padding-bottom: 80px;
+        }
+        .blueScreen .blueScreenLink{
+            padding-top: 58px;
+        }
+        .blueScreen .blueScreenContent .blueScreenHeader{
+            font-size: 30px;
+            line-height: 45px;
+        }
+        .blueScreen .blueScreenLink{
+            padding-top: 40px;
+        }
+        .blueScreen .blueScreenLink a{
+            font-size: 25px;
+        }
+        .blueScreen .blueScreenContent .blueScreenArrow{
+            width: 20px;
+        }
+
+
+
+        .darkMenu .darkPart{
+            padding: 40px 0;
+            font-size: 14px;
+        }
+        .darkMenu .pinkButton img{
+            width: 15px;
+        }
+        .menuWithPictures .buttonWithArrow img{
+            width: 45px;
+        }
+
+
+    }
+    @media only screen and (max-width: 420px){
+        .header .smallHeader{
+            padding: 15px 0 15px 0;
+            font-size: 12px;
+            display: inline-block;
+        }
+        .header .rightCorner{
+            padding: 0;
+        }
+        .header .buttonWithArrow img{
+            width: 20px;
+        }
+        .blueScreen{
+            padding-top: 60px;
+            padding-bottom: 50px;
+        }
+        .blueScreen .blueScreenContent .blueScreenHeader{
+            font-size: 20px;
+            line-height: 30px;
+        }
+        .blueScreen .blueScreenLink{
+            padding-top: 30px;
+        }
+        .blueScreen .blueScreenLink a{
+            font-size: 15px;
+        }
+        .blueScreen .blueScreenContent .blueScreenArrow{
+            width: 15px;
+        }
+
+        .darkMenu .darkPart{
+            padding: 23px 0;
+            font-size: 12px;
+        }
+        .darkMenu .pinkButton img{
+            width: 10px;
+        }
+        .menuWithPictures .buttonWithArrow img{
+            width: 40px;
+        }
+        
+    }
+
+
+
+
+</style>
+<body>
+<script>
+    $(document).ready(function(){
+            $('.squareElement').each(function () {
+                var cw = $(this).height();
+                $(this).css({ "width" : cw + "px" });
+            })
+            $('.widthSquareElement').each(function () {
+                var cw = $(this).width();
+                $(this).css({ "height" : cw + "px" });
+            })
+            $('.buttonWithArrow').each(function() {
+                var buttonHeight = $(this).width();
+                var arrowWidth = $(this).find("img").width();
+                $(this).css({"line-height" : buttonHeight + arrowWidth/2 + "px"})
+            })
+        $(window).resize(function() {
+            $('.squareElement').each(function () {
+                var cw = $(this).height();
+                $(this).css({ "width" : cw + "px" });
+            })
+            $('.widthSquareElement').each(function () {
+                var cw = $(this).width();
+                $(this).css({ "height" : cw + "px" });
+            })
+            $('.buttonWithArrow').each(function() {
+                var buttonHeight = $(this).width();
+                var arrowWidth = $(this).find("img").width();
+                $(this).css({"line-height" : buttonHeight + arrowWidth/2 + "px"})
+            })
+        })
+       
+        $('.mustBeInvisible').click(function(){
+            $('.mustBeInvisible img').toggle();
+            $('.navigation').toggle();
+            $('.invisibleMenu').toggle();
+        })
+
+    });
+</script>
+    <div class="header">
+        <div class="row">
+            <div class="twelve columns">
+                <ul class="fullHeader" type="none">
+                    <li><a href="">PSD WEBSITES</a></li>
+                    <li><a href="">UI KITS</a></li>
+                    <li><a href="">PREMIUM PSD FILES</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">BLOG</a></li>
+                </ul>
+                <div class="smallHeader">
+                    <a class="mustBeInvisible navigation">Navigation</a>
+                    <ul type="none" class="invisibleMenu">
+                        <li><a href="">PSD WEBSITES</a></li>
+                        <li><a href="">UI KITS</a></li>
+                        <li><a href="">PREMIUM PSD FILES</a></li>
+                        <li><a href="">ABOUT</a></li>
+                        <li><a href="">BLOG</a></li>
+                    </ul>
+                    <a class="rightCorner squareElement buttonWithArrow lineToClose mustBeInvisible">
+                        <img src="navigation.png"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="blueScreen">
+        <div class="row">
+            <div class="twelve columns">
+                <div class="blueScreenContent">
+                    <div class="blueScreenHeader">
+                        Awesome Free PSD
+                        <br>
+                        templates & Resources
+                    </div>
+                    <div class="blueScreenLink">
+                        <a href="http://www.BlazRobar.com">www.BlazRobar.com</a>
+                    </div>
+                    <a href=""> 
+                        <img src="arrow.png" class="blueScreenArrow"/> 
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="darkMenu">
+        <div class="row">
+            <div class="twelve columns">
+                <div class="darkPart">
+                    I`m like Robin Hood of PSD files.
+                </div>
+
+            </div>
+        </div>
+        <a class="pinkButton squareElement buttonWithArrow">
+            <img src="arrow.png"> 
+        </a>
+    </div>
+    <div class="menuWithPictures">
+        <div class="row">
+            <div class="four columns">
+                <a href="" class="widthSquareElement violetButton buttonWithArrow">
+                    <img src="arrow.png"/>
+                </a>
+            </div>
+            <div class="four columns picture">
+                <img src="bridge.png">
+            </div>
+            <div class="four columns picture">
+                <img src="girl.png">
+            </div>
+        </div>
+    </div>
+    <div class="downText">
+        <div class="row">
+            <div class="twelve columns textHeader">
+                <a href="http://blazrobar.com">BlazRobar.com</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="six columns textColumn">
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+            </div>
+            <div class="six columns textColumn">
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
