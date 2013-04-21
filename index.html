@@ -338,41 +338,48 @@
 
 <body>
 <script>
-    $(document).ready(function(){
-            $('.squareElement').each(function () {
-                var cw = $(this).height();
-                $(this).css({ "width" : cw + "px" });
-            })
-            $('.widthSquareElement').each(function () {
-                var cw = $(this).width();
-                $(this).css({ "height" : cw + "px" });
-            })
-            $('.buttonWithArrow').each(function() {
-                var buttonHeight = $(this).width();
-                var arrowWidth = $(this).find("img").width();
-                $(this).css({"line-height" : buttonHeight + arrowWidth/2 + "px"})
-            })
-        $(window).resize(function() {
-            $('.squareElement').each(function () {
-                var cw = $(this).height();
-                $(this).css({ "width" : cw + "px" });
-            })
-            $('.widthSquareElement').each(function () {
-                var cw = $(this).width();
-                $(this).css({ "height" : cw + "px" });
-            })
-            $('.buttonWithArrow').each(function() {
-                var buttonHeight = $(this).width();
-                var arrowWidth = $(this).find("img").width();
-                $(this).css({"line-height" : buttonHeight + arrowWidth/2 + "px"})
-            })
-        })
-       
-        $('.mustBeInvisible').click(function(){
-            $('.secondHeader').toggle();
-        })
 
-    });
+    (function () {
+
+        function setWidthByHeight($elements)
+        {
+            $elements.each(function () {
+                var height = $(this).height();
+                $(this).css({ "width" : height + "px" });
+            });
+        }
+
+        function setHeightByWidth($elements)
+        {
+            $elements.each(function () {
+                var width = $(this).width();
+                $(this).css({ "height" : width + "px" });
+            });
+        }
+
+        function calculateElements()
+        {
+            setWidthByHeight($('.squareElement'));
+            setHeightByWidth($('.widthSquareElement'));
+
+            $('.buttonWithArrow').each(function() {
+                var buttonHeight = $(this).width();
+                var arrowWidth = $(this).find("img").width();
+                $(this).css({"line-height" : buttonHeight + arrowWidth/2 + "px"})
+            });
+        }
+
+        $(function () {
+            calculateElements();
+            $(window).resize(calculateElements);
+           
+            $('.mustBeInvisible').click(function(){
+                $('.secondHeader').toggle();
+            })
+
+        });
+
+    })();
 </script>
     <div class="header">
         <div class="row">
