@@ -40,6 +40,7 @@
     }
     .picture img{
         width: 100%;
+        display: block;
     }
     .squareElement{
         display: block;
@@ -71,21 +72,32 @@
     .header a{
         color: #ffffff;
     }
-    .header .smallHeader{
+    .header .smallHeaderHeader{
         padding: 30px 30px 30px 0;
         display: none;
         font-size: 15px;
     }
-    .header .smallHeader .navigation:hover{
+    .header .smallHeaderHeader .navigation:hover{
         color: #add8e0;
     }
-    .header .smallHeader .invisibleMenu {
+    .secondHeader{
         display: none;
-    }
-    .header .smallHeader .invisibleMenu li {
+        background-color: #2f3336; 
+        padding-left: 50px;
+        font-weight: bold;
+        padding-bottom: 20px;
         padding-top: 10px;
     }
-    .header .rightCorner{
+    .secondHeader a{
+        color: white;
+    }
+    .secondHeader a:hover{
+        color: #add8e0;
+    }
+    .secondHeader .smallHeader  li {
+        padding-top: 10px;
+    }
+    .header .smallHeaderHeader .rightCorner{
         position: absolute;
         background-color: #202529;
         right: 0;
@@ -221,7 +233,7 @@
         }
     }
     @media only screen and (max-width: 640px){
-        .header .smallHeader{
+        .header .smallHeaderHeader {
             display: inline-block;
         }
         .header .fullHeader{
@@ -267,10 +279,9 @@
 
     }
     @media only screen and (max-width: 420px){
-        .header .smallHeader{
+        .header .smallHeaderHeader{
             padding: 15px 0 15px 0;
             font-size: 12px;
-            display: inline-block;
         }
         .header .rightCorner{
             padding: 0;
@@ -346,9 +357,7 @@
         })
        
         $('.mustBeInvisible').click(function(){
-            $('.mustBeInvisible img').toggle();
-            $('.navigation').toggle();
-            $('.invisibleMenu').toggle();
+            $('.secondHeader').toggle();
         })
 
     });
@@ -363,18 +372,26 @@
                     <li><a href="">ABOUT</a></li>
                     <li><a href="">BLOG</a></li>
                 </ul>
-                <div class="smallHeader">
+                <div class="smallHeaderHeader">
                     <a class="mustBeInvisible navigation">Navigation</a>
-                    <ul type="none" class="invisibleMenu">
+                    <a class="rightCorner squareElement buttonWithArrow mustBeInvisible">
+                        <img src="navigation.png"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="secondHeader">
+        <div class="row">
+            <div class="twelve columns">
+                <div class="smallHeader">
+                    <ul type="none">
                         <li><a href="">PSD WEBSITES</a></li>
                         <li><a href="">UI KITS</a></li>
                         <li><a href="">PREMIUM PSD FILES</a></li>
                         <li><a href="">ABOUT</a></li>
                         <li><a href="">BLOG</a></li>
                     </ul>
-                    <a class="rightCorner squareElement buttonWithArrow lineToClose mustBeInvisible">
-                        <img src="navigation.png"/>
-                    </a>
                 </div>
             </div>
         </div>
