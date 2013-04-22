@@ -151,6 +151,8 @@
         font-size: 25px;
         color: #9383a1;
         padding: 90px 0;
+        margin-right: 80px;
+        display: inline-block;
     }
     .darkMenu .pinkButton{
         background-color: #bc3183;
@@ -367,14 +369,22 @@
                 var arrowWidth = $(this).find("img").width();
                 $(this).css({"line-height" : buttonHeight + arrowWidth/2 + "px"})
             });
+
         }
 
         $(function () {
             calculateElements();
             $(window).resize(calculateElements);
            
-            $('.mustBeInvisible').click(function(){
-                $('.secondHeader').toggle();
+            $('.closed').click(function(){
+                $('.secondHeader').slideDown(2000);
+                $('.mustBeInvisible').removeClass("closed");
+                $('.mustBeInvisible').addClass("opend");
+            })
+            $('.opend').click(function(){
+                $('.secondHeader').slideUp('fast');
+                $('.mustBeInvisible').removeClass("opend");
+                $('.mustBeInvisible').addClass("closed");
             })
 
         });
@@ -392,8 +402,8 @@
                     <li><a href="">BLOG</a></li>
                 </ul>
                 <div class="smallHeaderHeader">
-                    <a class="mustBeInvisible navigation">Navigation</a>
-                    <a class="rightCorner squareElement buttonWithArrow mustBeInvisible">
+                    <a class="mustBeInvisible navigation closed">Navigation</a>
+                    <a class="rightCorner squareElement buttonWithArrow mustBeInvisible closed">
                         <img src="navigation.png"/>
                     </a>
                 </div>
