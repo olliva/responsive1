@@ -1,0 +1,343 @@
+* {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        font-family: "MenschRegular", "helvetica", arial, sans-serif;
+    }
+    body {
+        margin: 0;
+    }
+    p{
+        padding: 0;
+        margin: 0;
+        font-size: 12px;
+        line-height: 21px;
+        margin-top: 5px;
+        color: white;
+        font-weight: lighter;
+    }
+    a{
+        text-decoration: none;
+    }
+    a:hover{
+        cursor: pointer;
+    }
+    ul[type="none"] {
+        margin: 0;
+        padding: 0;
+    }
+    .row{
+        min-width: 0;
+    }
+    .picture img{
+        width: 100%;
+        display: block;
+    }
+    .squareElement{
+        display: block;
+    }
+    .widthSquareElement{
+        display: block;
+    }
+
+    .header{
+        background-color: #373c3f;
+        padding-left: 50px;
+        font-weight: bold;
+        position: relative;
+    }
+    .header li a:hover{
+        color: #add8e0;
+    }
+    .header .fullHeader li{
+        display: inline-block;
+        color: white;
+        padding: 30px 25px 30px 0;
+        line-height: 15px;
+
+    }
+    .header a{
+        color: #ffffff;
+    }
+    .header .smallHeaderHeader{
+        padding: 30px 30px 30px 0;
+        display: none;
+        font-size: 15px;
+    }
+    .header .smallHeaderHeader .navigation:hover{
+        color: #add8e0;
+    }
+    .smallHeader{
+        background-color: #373c3f; 
+        padding-left: 50px;
+        font-weight: bold;
+        display: none;
+    }
+    .smallHeader .smallHeaderContent {
+        width: 85%;
+        float: left;
+    }
+    .secondHeader  li a,
+    .smallHeader .smallHeaderContent a{
+        color: white;
+        font-weight: bold;
+    }
+    .secondHeader  li a:hover,
+    .smallHeader .smallHeaderContent a:hover{
+        color: #add8e0;
+    }
+    .smallHeader  .rightCorner{
+        background-color: #202529;
+        display: block;
+        width: 15%;
+        float: right;
+        text-align: center;
+    }
+    .tableElement {
+        display: table; 
+        height: 100%; 
+        width: 100%;
+    }
+    .tableCellElement{
+        display: table-cell; 
+        vertical-align: middle;
+    }
+    .smallHeader  .rightCorner img{
+        width: 20px;
+    }
+
+
+
+
+    .secondHeader{
+        background-color: #2f3336;
+        padding-left: 50px;
+        padding-bottom: 10px;
+    }
+    .secondHeader ul{
+        list-style-type: none;
+    }
+    .secondHeader  li {
+        padding-top: 10px;
+    }
+    
+
+
+
+
+
+
+    .blueScreen{
+        background-color: #0890a8;
+        padding-top: 200px;
+        padding-left: 50px;
+        padding-bottom: 170px;
+    }
+    .blueScreen .blueScreenContent{
+        position: relative;
+        display: inline-block;
+    }
+    .blueScreen .blueScreenContent .blueScreenHeader{
+        font-size: 65px;
+        color: #ffffff;
+    }
+    .blueScreen .blueScreenContent .arrowWithLink{
+        display: block;
+        width: 40px;
+        height: 46px;
+        position: absolute;
+        right: 20px;
+        bottom: 0;
+    }
+    .blueScreen .blueScreenContent .blueScreenArrow{
+        width: 40px;
+    }
+    .blueScreen .blueScreenLink{
+        padding-top: 64px;
+    }
+    .blueScreen .blueScreenLink a {
+        color: #a8d5df;
+        font-size: 30px;
+        display: block;
+        padding-right: 130px;
+    }
+
+
+
+    .darkMenu{
+        background-color: #27212c;
+        position: relative;
+        padding-left: 50px;
+    }
+    .darkMenu .darkPart{
+        padding-right: 20px;
+        display: inline-block;
+        width: 85%;
+        float: left;
+    }
+    .darkMenu .darkPart {
+        font-size: 25px;
+        color: #9383a1;
+        padding-right: 20px;
+    }
+    .darkMenu .pinkButton{
+        background-color: #bc3183;
+        text-align: center;
+        width: 15%;
+        float: right;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .darkMenu .pinkButton img{
+        width: 45px;
+    }
+
+
+
+    .menuWithPictures{
+        background-color: #5b0fa1;
+    }
+    .menuWithPictures .violetButton{
+        width: 100%;
+        background-color: #5b0fa1;
+        text-align: center;
+    }
+    .menuWithPictures .violetButton img{
+        width: 40px;
+    }
+    .menuWithPictures .row{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+    .menuWithPictures .row .columns{
+        margin: 0;
+        padding: 0;
+    }
+
+
+
+    .downText{
+        background-color: #ebebeb;
+        padding: 56px 50px 0 50px;
+        padding-bottom: 170px;
+    }
+    .downText .row .textHeader a{
+        color: #088ca5;
+        font-size: 25px;
+    }
+    .downText .row .textColumn p{
+        color: #515151;
+        font-weight: normal;
+        padding-top: 20px;
+        font-size: 15px;
+    }
+
+    .clearfix:after{
+        clear: both;
+        content: " ";
+        display: block;
+    }
+
+
+
+
+
+    @media only screen and (max-width: 980px){
+        .blueScreen{
+            padding-top: 150px;
+            padding-bottom: 100px;
+        }
+        .blueScreen .blueScreenLink{
+            padding-top: 58px;
+        }
+        .darkMenu .pinkButton img{
+            width: 30px;
+        }
+        .secondHeader{
+            display: none ;
+        }
+
+    }
+    @media only screen and (max-width: 640px){
+        .smallHeader {
+            display: block;
+        }
+        .header .fullHeader{
+            display: none;
+        }
+        .header .buttonWithArrow img{
+            width: 30px;
+        }
+        .blueScreen{
+            padding-top: 90px;
+            padding-bottom: 80px;
+        }
+        .blueScreen .blueScreenLink{
+            padding-top: 58px;
+        }
+        .blueScreen .blueScreenContent .blueScreenArrow{
+            width: 20px;
+        }
+        .blueScreen .blueScreenContent .arrowWithLink{
+            width: 20px;
+            height: 27px;
+        }
+        .secondHeader{
+            display: none ;
+        }
+        .darkMenu .pinkButton img{
+            width: 15px;
+        }
+        .menuWithPictures .buttonWithArrow img{
+            width: 45px;
+        }
+
+        .darkMenu .darkPart {
+            font-size: 18px;
+        }
+
+    }
+    @media only screen and (max-width: 420px){
+        .header .smallHeaderHeader{
+            padding: 15px 0 15px 0;
+            font-size: 12px;
+        }
+        .header .rightCorner{
+            padding: 0;
+        }
+        .header .buttonWithArrow img{
+            width: 20px;
+        }
+        .blueScreen{
+            padding-top: 60px;
+            padding-bottom: 50px;
+        }
+        .blueScreen .blueScreenContent .blueScreenHeader{
+            font-size: 20px;
+            line-height: 30px;
+        }
+        .blueScreen .blueScreenLink{
+            padding-top: 30px;
+        }
+        .blueScreen .blueScreenLink a{
+            font-size: 15px;
+        }
+        .blueScreen .blueScreenContent .blueScreenArrow{
+            width: 15px;
+        }
+        .blueScreen .blueScreenContent .arrowWithLink{
+            height: 20px;
+        }
+        .darkMenu .darkPart {
+            font-size: 15px;
+        }
+        .darkMenu .pinkButton img{
+            width: 10px;
+        }
+        .menuWithPictures .buttonWithArrow img{
+            width: 40px;
+        }
+        
+    }

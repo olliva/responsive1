@@ -123,15 +123,10 @@
         font-size: 65px;
         color: #ffffff;
     }
-    .blueScreen .blueScreenContent .arrowWithLink{
-        display: block;
-        width: 40px;
-        height: 46px;
+    .blueScreen .blueScreenContent .blueScreenArrow{
         position: absolute;
         right: 20px;
         bottom: 0;
-    }
-    .blueScreen .blueScreenContent .blueScreenArrow{
         width: 40px;
     }
     .blueScreen .blueScreenLink{
@@ -140,34 +135,30 @@
     .blueScreen .blueScreenLink a {
         color: #a8d5df;
         font-size: 30px;
-        display: block;
-        padding-right: 130px;
+        display: inline-block;
     }
 
 
 
     .darkMenu{
+        padding: 0 50px;
         background-color: #27212c;
         position: relative;
-        overflow: auto;
     }
     .darkMenu .darkPart{
-        padding-right: 20px;
-        display: inline-block;
-        width: 85%;
-        float: left;
-        padding-left: 50px;
-    }
-    .darkMenu .darkPart .columns{
         font-size: 25px;
         color: #9383a1;
+        padding: 90px 0;
         padding-right: 20px;
+        display: inline-block;
     }
     .darkMenu .pinkButton{
         background-color: #bc3183;
+        position: absolute;
+        right: 0;
+        height: 100%;
+        top: 0;
         text-align: center;
-        width: 15%;
-        float: right;
     }
     .darkMenu .pinkButton img{
         width: 45px;
@@ -227,6 +218,9 @@
         .blueScreen .blueScreenLink{
             padding-top: 58px;
         }
+        .darkMenu .darkPart{
+            padding: 60px 0;
+        }
        /* .blueScreen .blueScreenContent .blueScreenHeader{
             font-size: 50px;
             line-height: 69px;
@@ -275,12 +269,15 @@
         .blueScreen .blueScreenContent .blueScreenArrow{
             width: 20px;
         }
-        .blueScreen .blueScreenContent .arrowWithLink{
-            width: 20px;
-            height: 27px;
-        }
         .secondHeader{
             display: none ;
+        }
+
+
+
+        .darkMenu .darkPart{
+            padding: 40px 0;
+            
         }
         .darkMenu .pinkButton img{
             width: 15px;
@@ -319,8 +316,10 @@
         .blueScreen .blueScreenContent .blueScreenArrow{
             width: 15px;
         }
-        .blueScreen .blueScreenContent .arrowWithLink{
-            height: 20px;
+
+
+        .darkMenu .darkPart{
+            padding: 23px 0;
         }
         .darkMenu .pinkButton img{
             width: 10px;
@@ -369,19 +368,11 @@
                 $(this).css({ "height" : width + "px" });
             });
         }
-        function setLineHeight($elements)
-        {
-            $elements.each(function(){
-                var lineHeight = $('.pinkButton').height();
-                $(this).css({"line-height" : lineHeight + "px"});
-            })
-        }
 
         function calculateElements()
         {
             setWidthByHeight($('.squareElement'));
             setHeightByWidth($('.widthSquareElement'));
-            setLineHeight($('.darkPart'));
 
             $('.buttonWithArrow').each(function() {
                 var buttonHeight = $(this).width();
@@ -402,12 +393,8 @@
             })
             $(".blueScreenHeader").fitText(1, { minFontSize: '20px', maxFontSize: '60px' });
             $(".blueScreenLink a").fitText(1, { minFontSize: '15px', maxFontSize: '30px' });
-            $(".darkMenu .darkPart .columns").fitText(1, { minFontSize: '8px', maxFontSize: '20px' });
-
+            $(".darkMenu .darkPart").fitText(1, { minFontSize: '8px', maxFontSize: '25px' });
         });
-
-        
-
     })();
 </script>
 
@@ -461,7 +448,7 @@
                             www.BlazRobar.com
                         </a>
                     </div>
-                    <a href="#" class="arrowWithLink"> 
+                    <a href=""> 
                         <img src="img/arrow.png" class="blueScreenArrow"/> 
                     </a>
                 </div>
@@ -469,14 +456,14 @@
         </div>
     </div>
     <div class="darkMenu">
-        <div class="darkPart">
-            <div class="row">
-                <div class="twelve columns">
+        <div class="row">
+            <div class="twelve columns">
+                <div class="darkPart">
                     I`m like Robin Hood of PSD files.
                 </div>
             </div>
         </div>
-        <a  href="#" class="pinkButton widthSquareElement buttonWithArrow">
+        <a class="pinkButton squareElement buttonWithArrow" href="#">
             <img src="img/arrow.png"/> 
         </a>
     </div>
@@ -484,7 +471,7 @@
         <div class="row">
             <div class="four columns">
                 <a href="#" class="widthSquareElement violetButton buttonWithArrow">
-                    <img src="img/arrow.png"/>
+                    <img src="arrow.png"/>
                 </a>
             </div>
             <div class="four columns picture">
