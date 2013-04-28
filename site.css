@@ -42,7 +42,7 @@
 
     .header{
         background-color: #373c3f;
-        padding-left: 50px;
+        padding-left: 10px;
         font-weight: bold;
         position: relative;
     }
@@ -69,7 +69,7 @@
     }
     .smallHeader{
         background-color: #373c3f; 
-        padding-left: 50px;
+        padding-left: 10px;
         font-weight: bold;
         display: none;
     }
@@ -111,7 +111,7 @@
 
     .secondHeader{
         background-color: #2f3336;
-        padding-left: 50px;
+        padding-left: 10px;
         padding-bottom: 10px;
     }
     .secondHeader ul{
@@ -130,7 +130,7 @@
     .blueScreen{
         background-color: #0890a8;
         padding-top: 200px;
-        padding-left: 50px;
+        padding-left: 10px;
         padding-bottom: 170px;
         overflow-x: hidden; 
     }
@@ -168,7 +168,7 @@
     .darkMenu{
         background-color: #27212c;
         position: relative;
-        padding-left: 50px;
+        padding-left: 10px;
     }
     .darkMenu .darkPart{
         padding-right: 20px;
@@ -221,7 +221,7 @@
 
     .downText{
         background-color: #ebebeb;
-        padding: 56px 50px 0 50px;
+        padding: 56px 50px 0 10px;
         padding-bottom: 170px;
     }
     .downText .row .textHeader a{
